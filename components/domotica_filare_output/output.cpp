@@ -42,7 +42,7 @@ void DomoticaFilareOutput::write_state(bool state) {
     this->comando_->digital_write(true);
     this->comando_timer = millis() + 100;
   }
-
+}
 
 }  // namespace domotica_filare_output
 }  // namespace esphome
