@@ -25,11 +25,8 @@ void DomoticaFilareSwitch::loop() {
 }
 
 void DomoticaFilareSwitch::write_state(bool state) {
-  bool stato_pin = !this->stato_->digital_read();
-  if (this->state != stato_pin) {
-    this->comando_->digital_write(true);
-    this->comando_timer = millis() + 500;
-  }
+  this->comando_->digital_write(true);
+  this->comando_timer = millis() + 500;
 }
 
 }  // namespace domotica_filare
