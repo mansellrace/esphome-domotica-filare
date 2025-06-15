@@ -16,7 +16,7 @@ CONF_STATO = "stato"
 CONF_COMANDO = "comando"  
 
 CONFIG_SCHEMA = (
-    switch.switch_schema()
+    switch.switch_schema(DomoticaFilareSwitch)
     .extend(
         {
             cv.GenerateID(CONF_ID): cv.declare_id(DomoticaFilareSwitch),
