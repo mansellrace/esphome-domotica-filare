@@ -23,5 +23,5 @@ CONFIG_SCHEMA = (
 
 
 async def to_code(config):
-    var = await mcp23xxx_base.register_mcp23xxx(config)
+    var = await mcp23xxx_base.register_mcp23xxx(config, 16)
     await i2c.register_i2c_device(var, config)
