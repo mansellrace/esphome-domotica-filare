@@ -12,7 +12,7 @@ class MCP23017_buffer : public mcp23x17_base::MCP23X17Base, public i2c::I2CDevic
  public:
   MCP23017_buffer() = default;
 
-  bool digital_read(uint8_t pin) override;
+  bool digital_read(uint8_t pin);
   void setup() override;
   void dump_config() override;
   void loop() override;
