@@ -16,7 +16,7 @@ class MCP23017_buffer : public mcp23x17_base::MCP23X17Base, public i2c::I2CDevic
   void setup() override;
   void dump_config() override;
   void loop() override;
-  float get_loop_priority() const override;
+  float get_loop_priority() const;
 
  protected:
   bool read_reg(uint8_t reg, uint8_t *value) override;
